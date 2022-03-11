@@ -1,0 +1,12 @@
+---
+- name: Install Plesk
+  hosts: win
+  gather_facts: True
+  vars:
+    ansible_user: Administrator
+    ansible_connection: winrm
+    ansible_winrm_transport: basic
+    ansible_winrm_server_cert_validation: ignore
+
+  roles:
+    - { role: install-plesk, tags: [plesk] }
