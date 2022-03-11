@@ -1,0 +1,16 @@
+---
+  - name: Download Plesk Installer
+    win_get_url:
+      url: https://installer-win.plesk.com/plesk-installer.exe
+      dest: C:\Users\Administrator\Downloads\plesk-installer.exe
+
+  - name: Install Plesk
+    win_package:
+      path: C:\Users\Administrator\Downloads\plesk-installer.exe
+      arguments:
+      - --select-product-id=panel
+      - --select-release-latest
+      - --installation-type=recommended
+      creates_path: C:\Program Files (x86)\Plesk\bin\plesk.exe
+      #product_id: plesk
+      state: present

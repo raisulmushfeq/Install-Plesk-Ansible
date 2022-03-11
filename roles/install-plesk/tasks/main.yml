@@ -1,0 +1,19 @@
+---
+  - name: Check wheather plesk is installed
+    win_stat:
+      path: 'C:\Program Files (x86)\Plesk\bin\plesk.exe'
+    register: plesk_check
+    check_mode: no
+    failed_when: false
+    changed_when: false
+    tags: plesk
+
+  - name: Register plesk_installed variable
+    set_fact:
+      plesk_installed: ture
+    when: plesk_check.stat.exists
+    tags: plesk
+    
+  - name: Install Plesk
+    include_tasks: install.yml
+    when: plesk_installed is not defined
