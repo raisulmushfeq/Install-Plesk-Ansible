@@ -10,7 +10,49 @@
       arguments:
       - --select-product-id=panel
       - --select-release-latest
-      - --installation-type=recommended
+      - --install-component=panel
+      - --install-component=awstats
+      - --install-component=mailenable
+      - --install-component=dns
+      - --install-component=msdns
+      - --install-component=spamassassin
+      - --install-component=mysql-odbc
+      - --install-component=phpmyadmin
+      - --install-component=webalizer
+      - --install-component=webmail
+      - --install-component=drweb
+      - --install-component=plesk-urlprotection
+      - --install-component=health-monitoring
+      - --install-component=gitforwindows
+      - --install-component=plesk-migration-manager
+      - --install-component=msodbcsql11
+      - --install-component=msodbcsql13
+      - --install-component=msodbcsql17
+      - --install-component=mssql2016
+      - --install-component=mssql2019
+      - --install-component=mariadb106-client
+      - --install-component=modsecurity
+      - --install-component=urlrewrite
+      - --install-component=iiscompression
+      - --install-component=php56
+      - --install-component=php73
+      - --install-component=php74
+      - --install-component=php80
+      - --install-component=php81
+      - --install-component=git
+      - --install-component=wp-toolkit
+      - --install-component=advisor
+      - --install-component=xovi
+      - --install-component=sslit
+      - --install-component=letsencrypt
+      - --install-component=repair-kit
+      - --install-component=composer
+      - --install-component=monitoring
+      - --install-component=site-import
+      - --install-component=aspnetcore
+      - --install-component=aspnetcore-6.0
+      - --install-component=aspnetcore-5.0
+      - --install-component=aspnetcore-3.1
       creates_path: C:\Program Files (x86)\Plesk\bin\plesk.exe
       #product_id: plesk
       state: present

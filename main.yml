@@ -4,6 +4,7 @@
   gather_facts: True
   vars:
     ansible_user: Administrator
+    ansible_password: '{{ lookup("env", "ANSIBLE_WIN_ADMINISTRATOR_PASS") }}'
     ansible_connection: winrm
     ansible_winrm_transport: basic
     ansible_winrm_server_cert_validation: ignore
